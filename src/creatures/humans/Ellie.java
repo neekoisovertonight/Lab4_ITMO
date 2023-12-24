@@ -2,6 +2,8 @@ package creatures.humans;
 
 import creatures.humans.moves.*;
 import enums.*;
+import exceptions.EmptySpeechException;
+import exceptions.NoClothesException;
 
 
 public class Ellie extends Human implements Seatable, Speakable, Whisperable, EllieMoves, Wearable {
@@ -35,8 +37,12 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
     }
 
     @Override
-    public void speak(String phrase) {
-        System.out.println(name + " говорит: " + phrase);
+    public void speak(String phrase) throws EmptySpeechException {
+        if (phrase != null && !phrase.isEmpty()) {
+            System.out.println(name + " говорит: " + phrase);
+        } else {
+            throw new EmptySpeechException(name);
+        }
     }
 
     public int getBeauty() {
@@ -83,14 +89,12 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
     }
 
     @Override
-    public void wear(String clothing) {
-        if (clothing != null && !clothing.isEmpty()) {
-            beauty += 1;
-            System.out.println(Time.TODAY.getName() + " " + name + " надела " + clothing + ". Красота Элли: " + beauty);
-        } else {
-            System.out.println(name + " не может надеть ничего.");
+    public void wear(String clothing) throws NoClothesException {
+        if (clothing == null || clothing.isEmpty()) {
+            throw new NoClothesException(name);
         }
-
+        beauty += 1;
+        System.out.println(Time.TODAY.getName() + " " + name + " надела " + clothing + ". Красота Элли: " + beauty);
     }
 
     public void beInChurch() {
@@ -121,8 +125,7 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
         System.out.println(name + " чувствует непонимание происходящего вокруг себя. Непонимание Элли: " + getConfusion() + ".");
     }
 
-    public void openEyes(Jude jude, Norma norma) {
-        jude.speak("");
+    public void openEyes(@org.jetbrains.annotations.NotNull Jude jude, Norma norma) {
         norma.becomeHappy();
         System.out.print(name + " широко открывает глаза и смотрит на " + jude.getName() + ". ");
         confusion++;

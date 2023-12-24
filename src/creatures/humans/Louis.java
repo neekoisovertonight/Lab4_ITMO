@@ -2,6 +2,7 @@ package creatures.humans;
 
 import enums.*;
 import creatures.humans.moves.*;
+import exceptions.EmptySpeechException;
 
 public class Louis extends Human implements Seatable, Speakable, Whisperable, Hearable, IsPorter {
 
@@ -34,14 +35,18 @@ public class Louis extends Human implements Seatable, Speakable, Whisperable, He
     @Override
     public void sit(Human human) {
         if (getFatigue() > 0) {
-                setFatigue(getFatigue() - 1);
-            }
-            System.out.println(name + " сидит " + Prepositions.ON.getName() + " " + Locations.BENCH.getName() + " " + Prepositions.NEXTTO.getName() + " " + Prepositions.WITH.getName() + " " + human.getName() + ". Усталость: " + getFatigue());
+            setFatigue(getFatigue() - 1);
+        }
+        System.out.println(name + " сидит " + Prepositions.ON.getName() + " " + Locations.BENCH.getName() + " " + Prepositions.NEXTTO.getName() + " " + Prepositions.WITH.getName() + " " + human.getName() + ". Усталость: " + getFatigue());
     }
 
     @Override
-    public void speak(String phrase) {
-        System.out.println(name + " говорит: " + phrase);
+    public void speak(String phrase) throws EmptySpeechException {
+        if (phrase != null && !phrase.isEmpty()) {
+            System.out.println(name + " говорит: " + phrase);
+        } else {
+            throw new EmptySpeechException(name);
+        }
     }
 
     @Override

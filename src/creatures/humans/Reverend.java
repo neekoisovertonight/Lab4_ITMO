@@ -4,6 +4,7 @@ import creatures.gods.God;
 import creatures.gods.MainGod;
 import creatures.humans.moves.IsDead;
 import creatures.humans.moves.Speakable;
+import exceptions.EmptySpeechException;
 
 public class Reverend extends Human implements Speakable {
     private God god;
@@ -18,8 +19,12 @@ public class Reverend extends Human implements Speakable {
     }
 
     @Override
-    public void speak(String phrase) {
-        System.out.println(name + " говорит: Готовы ли носильщики?");
+    public void speak(String phrase) throws EmptySpeechException {
+        if (phrase != null && !phrase.isEmpty()) {
+            System.out.println(name + " говорит: " + phrase);
+        } else {
+            throw new EmptySpeechException(name);
+        }
     }
 }
 

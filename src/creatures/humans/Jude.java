@@ -2,6 +2,8 @@ package creatures.humans;
 
 import enums.*;
 import creatures.humans.moves.*;
+import exceptions.EmptySpeechException;
+import exceptions.NoClothesException;
 
 public class Jude extends Human implements Wearable, Speakable {
 
@@ -32,8 +34,12 @@ public class Jude extends Human implements Wearable, Speakable {
     }
 
     @Override
-    public void speak(String phrase) {
-        System.out.print(name + " говорит: Молодец, что пришла, малышка. Думаю, Норма тоже рада. ");
+    public void speak(String phrase) throws EmptySpeechException{
+        if (phrase != null && !phrase.isEmpty()) {
+            System.out.println(name + " говорит: " + phrase);
+        } else {
+            throw new EmptySpeechException(name);
+        }
     }
 
     public void lean(Ellie ellie) {

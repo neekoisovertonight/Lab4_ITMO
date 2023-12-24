@@ -1,5 +1,12 @@
+import creatures.gods.*;
+import creatures.humans.*;
+import exceptions.EmptySpeechException;
+import exceptions.NoClothesException;
+import objects.*;
+import enums.*;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoClothesException, EmptySpeechException {
         Human[] porters = new Human[4];
         MainGod mainGod = new MainGod("Бог");
         Ellie ellie = new Ellie("Элли", 8, 3, 0);
@@ -11,7 +18,7 @@ public class Main {
         Reverend reverendLaughing = new Reverend("Преподобный Лафлин", 40, 0, 0, mainGod);
         JudeNephew firstNephew = new JudeNephew("Первый племянник Джуда", 30, 0, 0);
         JudeNephew secondNephew = new JudeNephew("Второй племянник Джуда", 31, 0, 0);
-        NormaBrother normaBrother = new NormaBrother("Брат Нормы", 25, 0, 0);
+        NormaBrother normaBrother = new NormaBrother("Брат Нормы", 50, 0, 0);
         BlackSuit blackSuit = new BlackSuit();
         BlueDress blueDress = new BlueDress();
         System.out.println("Непонимание Элли: " + ellie.getConfusion());
