@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04352c46-8197-421f-aaaa-0d20348993a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_ITMO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/LivingBeing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/gods/God.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/gods/MainGod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Ellie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Hedge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Jude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/JudeNephew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Louis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Norma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/NormaBrother.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Parishioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/Reverend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/EllieMoves.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/Hearable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/IsDead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/IsPorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/Seatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/Speakable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/Wearable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/creatures/humans/moves/Whisperable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/Adjectives.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/Nouns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/Prepositions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/Time.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/BlackSuit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/BlueDress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/RealObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2a0D31X8DWzgwsUsADelvp1JJAH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nika\IdeaProjects\Lab4_ITMO" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04352c46-8197-421f-aaaa-0d20348993a4" name="Changes" comment="" />
+      <created>1703446402728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703446402728</updated>
+      <workItem from="1703446403898" duration="2158000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
