@@ -1,7 +1,6 @@
 import creatures.gods.*;
 import creatures.humans.*;
-import exceptions.EmptySpeechException;
-import exceptions.NoClothesException;
+import exceptions.*;
 import objects.*;
 import enums.*;
 
@@ -9,8 +8,9 @@ public class Main {
     public static void main(String[] args) throws NoClothesException, EmptySpeechException {
         Human[] porters = new Human[4];
         MainGod mainGod = new MainGod("Бог");
+        Rachel rachel = new Rachel("Рачэл", 27, 2, 0);
         Ellie ellie = new Ellie("Элли", 8, 3, 0);
-        Louis louis = new Louis("Луис", 28, 2, 0);
+        Louis louis = new Louis("Луис", 28, 3, 0);
         Jude jude = new Jude("Джуд", 30, 2, 0);
         Hedge hedge = new Hedge("Гэдж", 2, 0, 0);
         Norma norma = new Norma("Норма", 40, 0, 0);
@@ -19,8 +19,20 @@ public class Main {
         JudeNephew firstNephew = new JudeNephew("Первый племянник Джуда", 30, 0, 0);
         JudeNephew secondNephew = new JudeNephew("Второй племянник Джуда", 31, 0, 0);
         NormaBrother normaBrother = new NormaBrother("Брат Нормы", 50, 0, 0);
+        NightScene nightScene = new NightScene();
         BlackSuit blackSuit = new BlackSuit();
         BlueDress blueDress = new BlueDress();
+        rachel.speak("И не обижайся, если я заболею, когда будут хоронить Норму.");
+        louis.speak("Нет, дорогая, не обижусь.");
+        louis.beSlow();
+        rachel.holdHand(louis);
+        louis.speak("А можно мне взять Элли?");
+        rachel.shakeHand();
+        rachel.speak("О, Луис, я даже не знаю. Она еще маленькая...");
+        louis.speak("Но она уже год знает, откуда берутся дети.");
+        rachel.lookAtCeiling();
+        rachel.speak("Если тебе кажется, что так нужно, можешь ее взять.");
+        louis.speak("Давай спать");
         System.out.println("Непонимание Элли: " + ellie.getConfusion());
         System.out.println("Красота Элли: " + ellie.getBeauty());
         System.out.println("Усталость Элли: " + ellie.getFatigue());
@@ -43,7 +55,7 @@ public class Main {
         jude.kiss(ellie, Nouns.FOREHEAD.getName());
         ellie.openEyes(jude, norma);
         reverendLaughing.pray(norma);
-        reverendLaughing.speak("");
+        reverendLaughing.speak("Готовы ли носильщики?");
         ellie.grabPerson(louis);
         louis.whisper("Я один из носильщиков, дорогая");
         porters[0] = louis;

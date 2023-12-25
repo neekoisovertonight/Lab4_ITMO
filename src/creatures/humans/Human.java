@@ -1,6 +1,7 @@
 package creatures.humans;
 
 import creatures.LivingBeing;
+import exceptions.NegativeFatigueException;
 
 import java.util.Objects;
 
@@ -39,8 +40,11 @@ abstract public class Human extends LivingBeing {
         return this.age;
     }
 
-    public void setFatigue(int fatigue) {
-        this.fatigue = fatigue;
+    public void setFatigue(int newFatigue) {
+        if (newFatigue < 0) {
+            throw new NegativeFatigueException("Значение усталости не может быть отрицательным.");
+        }
+        this.fatigue = newFatigue;
     }
 
     public int getFatigue() {

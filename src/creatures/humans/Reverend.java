@@ -11,10 +11,11 @@ public class Reverend extends Human implements Speakable {
 
     public Reverend(String name, int age, int fatigue, int surprise, God god) {
         super(name, age, fatigue, surprise);
+        this.god = god;
     }
 
     public void pray(IsDead human){
-        System.out.print(name + " произносит молитву, просит " + this.god + " о вечном благословлении. ");
+        System.out.print(name + " произносит молитву, просит " + this.god.getName() + " о вечном благословлении. ");
         human.blessing();
     }
 

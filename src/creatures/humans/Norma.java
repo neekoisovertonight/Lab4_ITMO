@@ -2,7 +2,6 @@ package creatures.humans;
 
 import creatures.humans.moves.IsDead;
 import creatures.humans.moves.IsPorter;
-import creatures.humans.moves.Speakable;
 
 public class Norma extends Human implements IsDead {
     public boolean isBlessing() {

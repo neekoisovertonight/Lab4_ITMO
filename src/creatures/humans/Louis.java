@@ -4,7 +4,7 @@ import enums.*;
 import creatures.humans.moves.*;
 import exceptions.EmptySpeechException;
 
-public class Louis extends Human implements Seatable, Speakable, Whisperable, Hearable, IsPorter {
+public class Louis extends Human implements Seatable, Embraceable, Speakable, Whisperable, Hearable, IsPorter {
 
     public boolean getBlindness() {
         return blindness;
@@ -138,6 +138,16 @@ public class Louis extends Human implements Seatable, Speakable, Whisperable, He
             setSurprise(getSurprise() - 1);
             System.out.println(this.name + " оглядывается. Остальные ещё не подошли. Удивление: " + getSurprise() + ".");
         }
+    }
+
+    public void beSlow() {
+        setFatigue(getFatigue() + 1);
+        System.out.println(name + " медлит. Усталость: " + getFatigue());
+    }
+
+    @Override
+    public void embrace() {
+        System.out.println(name + " обнимает Рачэл.");
     }
 }
 

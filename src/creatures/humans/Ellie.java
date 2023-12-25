@@ -4,6 +4,7 @@ import creatures.humans.moves.*;
 import enums.*;
 import exceptions.EmptySpeechException;
 import exceptions.NoClothesException;
+import exceptions.UnexpectedStateException;
 
 
 public class Ellie extends Human implements Seatable, Speakable, Whisperable, EllieMoves, Wearable {
@@ -27,6 +28,7 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
         this.confusion = 0;
         this.fear = false;
     }
+
     @Override
     public void whisper(String message) {
         System.out.println(name + " шепчет: " + message + ".");
@@ -104,7 +106,7 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
 
     public void beOnFuneral() {
         setFatigue(4);
-        System.out.println(name + " " + Adjectives.FIRST.getName() + " " + Nouns.TIME.getName() + " " + Locations.FUNERAL.getName()  + ". Это сильно влияет на неё. Усталость: " + getFatigue());
+        System.out.println(name + " " + Adjectives.FIRST.getName() + " " + Nouns.TIME.getName() + " " + Locations.FUNERAL.getName() + ". Это сильно влияет на неё. Усталость: " + getFatigue());
     }
 
     public void stayCalm() {
@@ -130,6 +132,9 @@ public class Ellie extends Human implements Seatable, Speakable, Whisperable, El
         System.out.print(name + " широко открывает глаза и смотрит на " + jude.getName() + ". ");
         confusion++;
         System.out.println("Удивление " + name + " увеличено: " + confusion + ".");
+        if (confusion > 5) {
+            throw new UnexpectedStateException("Что-то неожиданное произошло во время открытия глаз.");
+        }
     }
 
     public void grabPerson(Louis louis) {
