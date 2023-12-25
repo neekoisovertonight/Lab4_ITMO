@@ -33,6 +33,7 @@ public class Main {
         rachel.lookAtCeiling();
         rachel.speak("Если тебе кажется, что так нужно, можешь ее взять.");
         louis.speak("Давай спать");
+        nightScene.nightEmbraceAndWhisper(louis, rachel);
         System.out.println("Непонимание Элли: " + ellie.getConfusion());
         System.out.println("Красота Элли: " + ellie.getBeauty());
         System.out.println("Усталость Элли: " + ellie.getFatigue());
@@ -41,7 +42,11 @@ public class Main {
         System.out.println("Слепота из-за любви Луиса: " + louis.getBlindness());
         ellie.sit(null);
         louis.sit(ellie);
-        ellie.wear(blueDress.getName());
+        try {
+            ellie.wear(blueDress.getName());
+        } catch (NoClothesException ignored) {
+
+        }
         louis.performHear(ellie);
         ellie.beInChurch();
         ellie.beOnFuneral();
@@ -57,12 +62,12 @@ public class Main {
         reverendLaughing.pray(norma);
         reverendLaughing.speak("Готовы ли носильщики?");
         ellie.grabPerson(louis);
-        louis.whisper("Я один из носильщиков, дорогая");
+        louis.speak("Я один из носильщиков, дорогая");
         porters[0] = louis;
         norma.grabAndCarry(porters);
         louis.almostSit();
         louis.putHand(ellie);
-        louis.whisper("Мы должны вынести Норму. Вчетвером — я, двое племянников Джуда и брат Нормы");
+        louis.speak("Мы должны вынести Норму. Вчетвером — я, двое племянников Джуда и брат Нормы");
         porters[1] = firstNephew;
         porters[2] = secondNephew;
         porters[3] = normaBrother;

@@ -4,7 +4,7 @@ import enums.*;
 import creatures.humans.moves.*;
 import exceptions.EmptySpeechException;
 
-public class Louis extends Human implements Seatable, Embraceable, Speakable, Whisperable, Hearable, IsPorter {
+public class Louis extends Human implements Seatable, Embraceable, Speakable, Hearable, IsPorter {
 
     public boolean getBlindness() {
         return blindness;
@@ -47,11 +47,6 @@ public class Louis extends Human implements Seatable, Embraceable, Speakable, Wh
         } else {
             throw new EmptySpeechException(name);
         }
-    }
-
-    @Override
-    public void whisper(String message) {
-        System.out.println(name + " шепчет: " + message + ".");
     }
 
 

@@ -5,8 +5,8 @@ import creatures.humans.moves.*;
 
 public class NightScene {
     static class NightlyEmbrace implements Embraceable {
-        private Louis louis;
-        private Rachel rachel;
+        private final Louis louis;
+        private final Rachel rachel;
 
         public NightlyEmbrace(Louis louis, Rachel rachel) {
             this.louis = louis;
@@ -16,13 +16,14 @@ public class NightScene {
         @Override
         public void embrace() {
             louis.embrace();
+            rachel.embrace();
         }
     }
 
-    private Whisperable whisperable = new Whisperable() {
+    private final Whisperer whisperer = new Whisperer() {
         @Override
         public void whisper(String message) {
-            System.out.println("Луис говорит: " + message);
+            System.out.println("Луис шепчет: " + message);
         }
     };
 
@@ -40,11 +41,11 @@ public class NightScene {
         Shivering shivering = new Shivering();
         shivering.shiver(rachel);
 
-        whisperable.whisper("Все хорошо.");
+        whisperer.whisper("Все хорошо.");
 
         class Sleeping {
             public void sleep(Rachel rachel) {
-                rachel.setFatigue(1);
+                rachel.setFatigue(0);
                 System.out.println(rachel.getName() + " усыпает. Усталость: " + rachel.getFatigue());
             }
         }

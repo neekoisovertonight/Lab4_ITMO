@@ -7,7 +7,7 @@ import exceptions.NoClothesException;
 import exceptions.UnexpectedStateException;
 
 
-public class Ellie extends Human implements Seatable, Speakable, Whisperable, EllieMoves, Wearable {
+public class Ellie extends Human implements Seatable, Speakable, Whisperer, EllieMoves, Wearable {
     private int beauty;
     private boolean isCalm;
     private int confusion;

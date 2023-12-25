@@ -5,7 +5,7 @@ import creatures.humans.moves.Pursing;
 import creatures.humans.moves.Speakable;
 import exceptions.EmptySpeechException;
 
-public class Rachel extends Human implements Speakable {
+public class Rachel extends Human implements Speakable, Embraceable {
 
     public boolean isSick() {
         return isSick;
@@ -76,4 +76,8 @@ public class Rachel extends Human implements Speakable {
         System.out.println(name + " смотрит в потолок. Усталость: " + getFatigue());
     }
 
+    @Override
+    public void embrace() {
+        System.out.println(name + " обнимает Луиса.");
+    }
 }
